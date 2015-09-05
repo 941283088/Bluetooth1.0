@@ -19,5 +19,6 @@ public class BluetoothTools {
         Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
 //直接打开蓝牙
         adapter.enable();
+        System.console().printf("end");
     }
 }
