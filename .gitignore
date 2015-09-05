@@ -8,6 +8,9 @@ build/
 .gradle/
 */build/
 
+# generated files
+bin/
+gen/
 
 # IDEA
 *.iml
