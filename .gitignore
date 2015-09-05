@@ -7,7 +7,7 @@
 build/
 .gradle/
 */build/
-
+.idea/
 # generated files
 bin/
 gen/
