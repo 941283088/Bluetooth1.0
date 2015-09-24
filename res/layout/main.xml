@@ -9,5 +9,10 @@
             android:layout_height="wrap_content"
             android:text="@string/hello"
             />
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/spread_line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="320dip"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>
 

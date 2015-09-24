@@ -1,443 +1,129 @@
 package com.Bluetooth.Activity;
 
 import android.app.Activity;
-import android.bluetooth.BluetoothAdapter;
-import android.content.Context;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import com.Bluetooth.base.BluetoothTools;
-
-import android.os.Handler;
 import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
 
-import android.app.Service;
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothGatt;
-import android.bluetooth.BluetoothGattCallback;
-import android.bluetooth.BluetoothGattCharacteristic;
-import android.bluetooth.BluetoothGattDescriptor;
-import android.bluetooth.BluetoothGattService;
-import android.bluetooth.BluetoothManager;
-import android.bluetooth.BluetoothProfile;
-import android.content.Context;
-import android.content.Intent;
-import android.os.Binder;
-import android.os.IBinder;
-import android.util.Log;
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.Legend.LegendForm;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+
 import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
-import android.widget.BaseAdapter;
-import android.view.LayoutInflater;
+import android.graphics.Color;
+import android.os.Bundle;
 
 /**
  * Created by TR on 2015/9/5.
  */
-
-/*
 public class MainActivity extends Activity
 {
-    private final static String UUID_KEY_DATA = "0000ffe1-0000-1000-8000-00805f9b34fb";
-    private LeDeviceListAdapter mLeDeviceListAdapter;
-    private BluetoothAdapter mBluetoothAdapter;
-    private boolean mScanning;
-    private Handler mHandler;
 
+    private LineChart mLineChart;
 
-
+    /**
+     * Called when the activity is first created.
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mHandler = new Handler();
+
         setContentView(R.layout.main);
         Log.i("dd","affair");
-//        BluetoothTools.initBluetooth();
-//        BluetoothTools.findDevicesByName("ddd");
+        BluetoothTools.initBluetooth();
+        BluetoothTools.findDevicesByName("ddd");
 
-
-        if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
-            Toast.makeText(this, "不支持蓝牙4.0", Toast.LENGTH_SHORT).show();
-            finish();
-        }
-//
-        final BluetoothManager bluetoothManager =
-                (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
-        mBluetoothAdapter = bluetoothManager.getAdapter();
-
-        if (mBluetoothAdapter == null || !mBluetoothAdapter.isEnabled()) {
-           // Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            //startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
-        }
-
-        Log.d("ble test",mBluetoothAdapter.toString());
-        scanLeDevice(true);
+        mLineChart = (LineChart) findViewById(R.id.spread_line_chart);
+        LineData mLineData = getLineData(36, 100);
+        showChart(mLineChart, mLineData, Color.rgb(114, 188, 223));
 
     }
 
-    private static final long SCAN_PERIOD = 10000;
-    private void scanLeDevice(final boolean enable) {
-        if (enable) {
-            // Stops scanning after a pre-defined scan period.
-            mHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    mScanning = false;
-                    mBluetoothAdapter.stopLeScan(mLeScanCallback);
-                }
-            }, SCAN_PERIOD);
+    // 设置显示的样式
+    private void showChart(LineChart lineChart, LineData lineData, int color) {
+        lineChart.setDrawBorders(false);  //是否在折线图上添加边框
 
-            mScanning = true;
-            mBluetoothAdapter.startLeScan(mLeScanCallback);
-            Log.d("ble test  02",mBluetoothAdapter.toString());
-        } else {
-            mScanning = false;
-            mBluetoothAdapter.stopLeScan(mLeScanCallback);
-        }
+        // no description text
+        lineChart.setDescription("");// 数据描述
+        // 如果没有数据的时候，会显示这个，类似listview的emtpyview
+        lineChart.setNoDataTextDescription("You need to provide data for the chart.");
 
+        // enable / disable grid background
+        lineChart.setDrawGridBackground(false); // 是否显示表格颜色
+        lineChart.setGridBackgroundColor(Color.WHITE & 0x70FFFFFF); // 表格的的颜色，在这里是是给颜色设置一个透明度
+
+        // enable touch gestures
+        lineChart.setTouchEnabled(true); // 设置是否可以触摸
+
+        // enable scaling and dragging
+        lineChart.setDragEnabled(true);// 是否可以拖拽
+        lineChart.setScaleEnabled(true);// 是否可以缩放
+
+        // if disabled, scaling can be done on x- and y-axis separately
+        lineChart.setPinchZoom(false);//
+
+        lineChart.setBackgroundColor(color);// 设置背景
+
+        // add data
+        lineChart.setData(lineData); // 设置数据
+
+        // get the legend (only possible after setting data)
+        Legend mLegend = lineChart.getLegend(); // 设置比例图标示，就是那个一组y的value的
+
+        // modify the legend ...
+        // mLegend.setPosition(LegendPosition.LEFT_OF_CHART);
+        mLegend.setForm(LegendForm.CIRCLE);// 样式
+        mLegend.setFormSize(6f);// 字体
+        mLegend.setTextColor(Color.WHITE);// 颜色
+//      mLegend.setTypeface(mTf);// 字体
+
+        lineChart.animateX(2500); // 立即执行的动画,x轴
     }
 
-    // Device scan callback.
-    private BluetoothAdapter.LeScanCallback mLeScanCallback =
-            new BluetoothAdapter.LeScanCallback() {
-
-                @Override
-                public void onLeScan(final BluetoothDevice device, int rssi, byte[] scanRecord) {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            mLeDeviceListAdapter.addDevice(device);
-//                            mLeDeviceListAdapter.notifyDataSetChanged();
-                            Log.e("ble test run ------------- :",device.toString());
-                            mLeDevice = device;
-                        }
-                    });
-                }
-            };
-
-    // Adapter for holding devices found through scanning.
-    private class LeDeviceListAdapter {
-        private ArrayList<BluetoothDevice> mLeDevices;
-//        private LayoutInflater mInflator;
-
-        public LeDeviceListAdapter() {
-            super();
-            mLeDevices = new ArrayList<BluetoothDevice>();
-//            mInflator = MainActivity.this.getLayoutInflater();
+    /**
+     * 生成一个数据
+     * @param count 表示图表中有多少个坐标点
+     * @param range 用来生成range以内的随机数
+     * @return
+     */
+    private LineData getLineData(int count, float range) {
+        ArrayList<String> xValues = new ArrayList<String>();
+        for (int i = 0; i < count; i++) {
+            // x轴显示的数据，这里默认使用数字下标显示
+            xValues.add("" + i);
         }
 
-        public void addDevice(BluetoothDevice device) {
-            if(!mLeDevices.contains(device)) {
-                mLeDevices.add(device);
-            }
+        // y轴的数据
+        ArrayList<Entry> yValues = new ArrayList<Entry>();
+        for (int i = 0; i < count; i++) {
+            float value = (float) (Math.random() * range) + 3;
+            yValues.add(new Entry(value, i));
         }
 
-        public BluetoothDevice getDevice(int position) {
-            return mLeDevices.get(position);
-        }
+        // create a dataset and give it a type
+        // y轴的数据集合
+        LineDataSet lineDataSet = new LineDataSet(yValues, "测试折线图" /*显示在比例图上*/);
+        // mLineDataSet.setFillAlpha(110);
+        // mLineDataSet.setFillColor(Color.RED);
 
-        public void clear() {
-            mLeDevices.clear();
-        }
+        //用y轴的集合来设置参数
+        lineDataSet.setLineWidth(1.75f); // 线宽
+        lineDataSet.setCircleSize(3f);// 显示的圆形大小
+        lineDataSet.setColor(Color.WHITE);// 显示颜色
+        lineDataSet.setCircleColor(Color.WHITE);// 圆形的颜色
+        lineDataSet.setHighLightColor(Color.WHITE); // 高亮的线的颜色
 
-//        @Override
-        public int getCount() {
-            return mLeDevices.size();
-        }
+        ArrayList<LineDataSet> lineDataSets = new ArrayList<LineDataSet>();
+        lineDataSets.add(lineDataSet); // add the datasets
 
-//        @Override
-        public Object getItem(int i) {
-            return mLeDevices.get(i);
-        }
+        // create a data object with the datasets
+        LineData lineData = new LineData(xValues, lineDataSets);
 
-//        @Override
-        public long getItemId(int i) {
-            return i;
-        }
-
-//        @Override
-//        public View getView(int i, View view, ViewGroup viewGroup) {
-//            ViewHolder viewHolder;
-//            // General ListView optimization code.
-//            if (view == null) {
-//                view = mInflator.inflate(R.layout.listitem_device, null);
-//                viewHolder = new ViewHolder();
-//                viewHolder.deviceAddress = (TextView) view.findViewById(R.id.device_address);
-//                viewHolder.deviceName = (TextView) view.findViewById(R.id.device_name);
-//                view.setTag(viewHolder);
-//            } else {
-//                viewHolder = (ViewHolder) view.getTag();
-//            }
-//
-//            BluetoothDevice device = mLeDevices.get(i);
-//            final String deviceName = device.getName();
-//            if (deviceName != null && deviceName.length() > 0)
-//                viewHolder.deviceName.setText(deviceName);
-//            else
-//                viewHolder.deviceName.setText(R.string.unknown_device);
-//            viewHolder.deviceAddress.setText(device.getAddress());
-//
-//            return view;
-//        }
+        return lineData;
     }
 
-    private BluetoothDevice mLeDevice;
-
-}
-*/
-
-import android.app.Activity;
-import android.app.ListActivity;
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothManager;
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.os.Bundle;
-import android.os.Handler;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-
-/**
- * Activity for scanning and displaying available Bluetooth LE devices.
- */
-public class MainActivity extends ListActivity {
-    private LeDeviceListAdapter mLeDeviceListAdapter;
-    private BluetoothAdapter mBluetoothAdapter;
-    private boolean mScanning;
-    private Handler mHandler;
-
-    private static final int REQUEST_ENABLE_BT = 1;
-    // Stops scanning after 10 seconds.
-    private static final long SCAN_PERIOD = 10000;
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        getActionBar().setTitle(R.string.title_devices);
-        mHandler = new Handler();
-
-        // Use this check to determine whether BLE is supported on the device.  Then you can
-        // selectively disable BLE-related features.
-        if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
-            Toast.makeText(this, R.string.ble_not_supported, Toast.LENGTH_SHORT).show();
-            finish();
-        }
-
-        // Initializes a Bluetooth adapter.  For API level 18 and above, get a reference to
-        // BluetoothAdapter through BluetoothManager.
-        final BluetoothManager bluetoothManager =
-                (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
-        mBluetoothAdapter = bluetoothManager.getAdapter();
-
-        // Checks if Bluetooth is supported on the device.
-        if (mBluetoothAdapter == null) {
-            Toast.makeText(this, R.string.error_bluetooth_not_supported, Toast.LENGTH_SHORT).show();
-            finish();
-            return;
-        }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        if (!mScanning) {
-            menu.findItem(R.id.menu_stop).setVisible(false);
-            menu.findItem(R.id.menu_scan).setVisible(true);
-            menu.findItem(R.id.menu_refresh).setActionView(null);
-        } else {
-            menu.findItem(R.id.menu_stop).setVisible(true);
-            menu.findItem(R.id.menu_scan).setVisible(false);
-            menu.findItem(R.id.menu_refresh).setActionView(
-                    R.layout.actionbar_indeterminate_progress);
-        }
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_scan:
-                mLeDeviceListAdapter.clear();
-                scanLeDevice(true);
-                break;
-            case R.id.menu_stop:
-                scanLeDevice(false);
-                break;
-        }
-        return true;
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        // Ensures Bluetooth is enabled on the device.  If Bluetooth is not currently enabled,
-        // fire an intent to display a dialog asking the user to grant permission to enable it.
-        if (!mBluetoothAdapter.isEnabled()) {
-            if (!mBluetoothAdapter.isEnabled()) {
-                Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
-            }
-        }
-
-        // Initializes list view adapter.
-        mLeDeviceListAdapter = new LeDeviceListAdapter();
-        setListAdapter(mLeDeviceListAdapter);
-        scanLeDevice(true);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        // User chose not to enable Bluetooth.
-        if (requestCode == REQUEST_ENABLE_BT && resultCode == Activity.RESULT_CANCELED) {
-            finish();
-            return;
-        }
-        super.onActivityResult(requestCode, resultCode, data);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        scanLeDevice(false);
-        mLeDeviceListAdapter.clear();
-    }
-
-    @Override
-    protected void onListItemClick(ListView l, View v, int position, long id) {
-        final BluetoothDevice device = mLeDeviceListAdapter.getDevice(position);
-        if (device == null) return;
-        final Intent intent = new Intent(this, DeviceControlActivity.class);
-        intent.putExtra(DeviceControlActivity.EXTRAS_DEVICE_NAME, device.getName());
-        intent.putExtra(DeviceControlActivity.EXTRAS_DEVICE_ADDRESS, device.getAddress());
-        if (mScanning) {
-            mBluetoothAdapter.stopLeScan(mLeScanCallback);
-            mScanning = false;
-        }
-        startActivity(intent);
-    }
-
-    private void scanLeDevice(final boolean enable) {
-        if (enable) {
-            // Stops scanning after a pre-defined scan period.
-            mHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    mScanning = false;
-                    mBluetoothAdapter.stopLeScan(mLeScanCallback);
-                    invalidateOptionsMenu();
-                }
-            }, SCAN_PERIOD);
-
-            mScanning = true;
-            mBluetoothAdapter.startLeScan(mLeScanCallback);
-        } else {
-            mScanning = false;
-            mBluetoothAdapter.stopLeScan(mLeScanCallback);
-        }
-        invalidateOptionsMenu();
-    }
-
-    // Adapter for holding devices found through scanning.
-    private class LeDeviceListAdapter extends BaseAdapter {
-        private ArrayList<BluetoothDevice> mLeDevices;
-        private LayoutInflater mInflator;
-
-        public LeDeviceListAdapter() {
-            super();
-            mLeDevices = new ArrayList<BluetoothDevice>();
-            mInflator = MainActivity.this.getLayoutInflater();
-        }
-
-        public void addDevice(BluetoothDevice device) {
-            if(!mLeDevices.contains(device)) {
-                mLeDevices.add(device);
-            }
-        }
-
-        public BluetoothDevice getDevice(int position) {
-            return mLeDevices.get(position);
-        }
-
-        public void clear() {
-            mLeDevices.clear();
-        }
-
-        @Override
-        public int getCount() {
-            return mLeDevices.size();
-        }
-
-        @Override
-        public Object getItem(int i) {
-            return mLeDevices.get(i);
-        }
-
-        @Override
-        public long getItemId(int i) {
-            return i;
-        }
-
-        @Override
-        public View getView(int i, View view, ViewGroup viewGroup) {
-            ViewHolder viewHolder;
-            // General ListView optimization code.
-            if (view == null) {
-                view = mInflator.inflate(R.layout.listitem_device, null);
-                viewHolder = new ViewHolder();
-                viewHolder.deviceAddress = (TextView) view.findViewById(R.id.device_address);
-                viewHolder.deviceName = (TextView) view.findViewById(R.id.device_name);
-                view.setTag(viewHolder);
-            } else {
-                viewHolder = (ViewHolder) view.getTag();
-            }
-
-            BluetoothDevice device = mLeDevices.get(i);
-            final String deviceName = device.getName();
-            if (deviceName != null && deviceName.length() > 0)
-                viewHolder.deviceName.setText(deviceName);
-            else
-                viewHolder.deviceName.setText(R.string.unknown_device);
-            viewHolder.deviceAddress.setText(device.getAddress());
-
-            return view;
-        }
-    }
-
-    // Device scan callback.
-    private BluetoothAdapter.LeScanCallback mLeScanCallback =
-            new BluetoothAdapter.LeScanCallback() {
-
-                @Override
-                public void onLeScan(final BluetoothDevice device, int rssi, byte[] scanRecord) {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            mLeDeviceListAdapter.addDevice(device);
-                            mLeDeviceListAdapter.notifyDataSetChanged();
-                        }
-                    });
-                }
-            };
-
-    static class ViewHolder {
-        TextView deviceName;
-        TextView deviceAddress;
-    }
 }
