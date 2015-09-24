@@ -37,8 +37,14 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.Bluetooth.Activity" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a271d98d-3683-476f-98db-47960ac4f194" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Bluetooth/Activity/SampleGattAttributes.java" afterPath="$PROJECT_DIR$/src/com/Bluetooth/Activity/SampleGattAttributes.java" />
+    <list default="true" id="a271d98d-3683-476f-98db-47960ac4f194" name="Default" comment="Merge branch 'master' of github.com:941283088/Bluetooth1.0&#10;&#10;Conflicts:&#10;&#9;res/layout/main.xml&#10;&#9;src/com/example/Bluetooth/MainActivity.java&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/common/DataPool.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/common/FileCtl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/Bluetooth/DTO/ViewData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/common/WriteThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bluetooth.iml" afterPath="$PROJECT_DIR$/Bluetooth.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Bluetooth.iws" />
@@ -58,105 +64,396 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="Bluetooth" />
+    <favorites_list name="Bluetooth">
+      <favorite_root url="file://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode">
+        <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/filter" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                    <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/filter/Approximator.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                    <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/filter/Approximator.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  </favorite_root>
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/Entry.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/Entry.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/BarData.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/DataSet.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/PieData.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/BarData.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/BarEntry.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/DataSet.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/LineData.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/PieData.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/BarEntry.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/ChartData.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/LineData.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/RadarData.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/BarDataSet.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/BubbleData.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/CandleData.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/ChartData.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/PieDataSet.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/RadarData.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/BarDataSet.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/BubbleData.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/BubbleEntry.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/CandleData.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/CandleEntry.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/LineDataSet.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/PieDataSet.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/ScatterData.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/BubbleEntry.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/CandleEntry.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/CombinedData.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/LineDataSet.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/RadarDataSet.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/ScatterData.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/BubbleDataSet.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/CandleDataSet.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/CombinedData.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/RadarDataSet.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/BubbleDataSet.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/CandleDataSet.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/ScatterDataSet.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/ScatterDataSet.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/LineRadarDataSet.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/LineRadarDataSet.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/BarLineScatterCandleData.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/BarLineScatterCandleData.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/BarLineScatterCandleDataSet.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/BarLineScatterCandleDataSet.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/LineScatterCandleRadarDataSet.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/data/LineScatterCandleRadarDataSet.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+                <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/jobs" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/jobs/MoveViewJob.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/jobs/MoveViewJob.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+                <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/FSize.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/Utils.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/FSize.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/PointD.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/Utils.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/PointD.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/FileUtils.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/FileUtils.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/Transformer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/Transformer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/ColorTemplate.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/FillFormatter.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/ColorFormatter.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/ColorTemplate.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/FillFormatter.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/ValueFormatter.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/ColorFormatter.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/SelectionDetail.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/ValueFormatter.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/ViewPortHandler.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/PercentFormatter.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/SelectionDetail.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/ViewPortHandler.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/PercentFormatter.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/LargeValueFormatter.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/LargeValueFormatter.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/DefaultValueFormatter.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/EntryXIndexComparator.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/DefaultValueFormatter.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/EntryXIndexComparator.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/TransformerHorizontalBarChart.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/utils/TransformerHorizontalBarChart.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+                <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/buffer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/buffer/BarBuffer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/buffer/BarBuffer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/buffer/LineBuffer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/buffer/LineBuffer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/buffer/CircleBuffer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/buffer/CircleBuffer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/buffer/ScatterBuffer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/buffer/AbstractBuffer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/buffer/ScatterBuffer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/buffer/AbstractBuffer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/buffer/CandleBodyBuffer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/buffer/CandleBodyBuffer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/buffer/CandleShadowBuffer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/buffer/CandleShadowBuffer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/buffer/HorizontalBarBuffer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/buffer/HorizontalBarBuffer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+                <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/Chart.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/Chart.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/BarChart.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/PieChart.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/BarChart.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/LineChart.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/PieChart.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/LineChart.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/RadarChart.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/BubbleChart.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/RadarChart.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/BubbleChart.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/ScatterChart.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/CombinedChart.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/ScatterChart.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/CombinedChart.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/BarLineChartBase.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/CandleStickChart.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/BarLineChartBase.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/CandleStickChart.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/PieRadarChartBase.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/HorizontalBarChart.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/PieRadarChartBase.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/charts/HorizontalBarChart.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+                <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/matrix" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/matrix/Vector3.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/matrix/Vector3.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+                <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/listener" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/listener/OnDrawListener.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/listener/OnDrawListener.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/listener/ChartTouchListener.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/listener/ChartTouchListener.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/listener/OnChartGestureListener.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/listener/OnChartGestureListener.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/listener/BarLineChartTouchListener.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/listener/BarLineChartTouchListener.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/listener/PieRadarChartTouchListener.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/listener/PieRadarChartTouchListener.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/listener/OnChartValueSelectedListener.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/listener/OnDrawLineChartTouchListener.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/listener/OnChartValueSelectedListener.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/listener/OnDrawLineChartTouchListener.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+                <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/Renderer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/Renderer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/AxisRenderer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/DataRenderer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/AxisRenderer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/DataRenderer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/XAxisRenderer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/YAxisRenderer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/LegendRenderer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/XAxisRenderer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/YAxisRenderer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/LegendRenderer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/BarChartRenderer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/PieChartRenderer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/BarChartRenderer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/LineChartRenderer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/PieChartRenderer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/LineChartRenderer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/RadarChartRenderer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/BubbleChartRenderer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/RadarChartRenderer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/BubbleChartRenderer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/ScatterChartRenderer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/CombinedChartRenderer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/ScatterChartRenderer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/XAxisRendererBarChart.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/CombinedChartRenderer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/XAxisRendererBarChart.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/XAxisRendererRadarChart.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/YAxisRendererRadarChart.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/CandleStickChartRenderer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/XAxisRendererRadarChart.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/YAxisRendererRadarChart.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/CandleStickChartRenderer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/HorizontalBarChartRenderer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/HorizontalBarChartRenderer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/LineScatterCandleRadarRenderer.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/LineScatterCandleRadarRenderer.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/XAxisRendererHorizontalBarChart.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/YAxisRendererHorizontalBarChart.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/XAxisRendererHorizontalBarChart.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/renderer/YAxisRendererHorizontalBarChart.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+                <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/animation" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/animation/Easing.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/animation/Easing.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/animation/ChartAnimator.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/animation/ChartAnimator.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/animation/EasingFunction.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/animation/EasingFunction.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+                <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/exception" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/exception/DrawingDataSetNotCreatedException.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/exception/DrawingDataSetNotCreatedException.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+                <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/highlight" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/highlight/Range.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/highlight/Range.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/highlight/Highlight.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/highlight/Highlight.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/highlight/BarHighlighter.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/highlight/BarHighlighter.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/highlight/ChartHighlighter.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/highlight/ChartHighlighter.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/highlight/HorizontalBarHighlighter.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/highlight/HorizontalBarHighlighter.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+                <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/components" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/components/XAxis.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/components/YAxis.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/components/Legend.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/components/XAxis.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/components/YAxis.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/components/Legend.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/components/AxisBase.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/components/AxisBase.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/components/LimitLine.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/components/LimitLine.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/components/MarkerView.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/components/MarkerView.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/components/ComponentBase.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/components/ComponentBase.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+                <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/interfaces" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/interfaces/ChartInterface.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/interfaces/BarDataProvider.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/interfaces/ChartInterface.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/interfaces/BarDataProvider.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/interfaces/LineDataProvider.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/interfaces/LineDataProvider.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/interfaces/BubbleDataProvider.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/interfaces/CandleDataProvider.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/interfaces/BubbleDataProvider.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/interfaces/CandleDataProvider.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/interfaces/ScatterDataProvider.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/interfaces/ScatterDataProvider.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/interfaces/BarLineScatterCandleBubbleDataProvider.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/com/github/mikephil/charting/interfaces/BarLineScatterCandleBubbleDataProvider.class" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+              </favorite_root>
+            </favorite_root>
+          </favorite_root>
+        </favorite_root>
+        <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/META-INF" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/META-INF/MANIFEST.MF" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="jar://$PROJECT_DIR$/libs/mpandroidchartlibrary-2-1-3.jar!/.classpath" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      </favorite_root>
+    </favorites_list>
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="DeviceScanActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/Activity/DeviceScanActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="817" max-vertical-offset="5187">
-              <caret line="43" column="31" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="4161">
+              <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+              <folding>
+                <element signature="e#1896#1918#0" expanded="true" />
+                <element signature="e#2225#2251#0" expanded="true" />
+                <element signature="e#2783#2821#0" expanded="true" />
+                <element signature="e#8482#8505#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileCtl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/common/FileCtl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="893">
+              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WriteThread.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/common/WriteThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="186" max-vertical-offset="627">
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base-strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/base-strings.xml">
+      <file leaf-file-name="DataPool.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/common/DataPool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="684">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.33333334" vertical-offset="595" max-vertical-offset="1121">
+              <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#538#548#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/DTO/ViewData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="589">
+              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeviceControlActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/Activity/DeviceControlActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="5054">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template-styles.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/template-styles.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="314" max-vertical-offset="912">
-              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+      <file leaf-file-name="actionbar_indeterminate_progress.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/actionbar_indeterminate_progress.xml">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/Activity/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2451" max-vertical-offset="2565">
-              <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-              <folding />
-            </state>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="513">
-              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="202" max-vertical-offset="551">
+              <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base-template-styles.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values-v21/base-template-styles.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="570">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+      <file leaf-file-name="gatt_services_characteristics.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/gatt_services_characteristics.xml">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1444">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="BluetoothLeService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/Activity/BluetoothLeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5129" max-vertical-offset="5510">
-              <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SampleGattAttributes.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/Activity/SampleGattAttributes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8071066" vertical-offset="119" max-vertical-offset="722">
-              <caret line="37" column="77" selection-start-line="37" selection-start-column="77" selection-end-line="37" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="570">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gatt_services.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/menu/gatt_services.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="665">
-              <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="5510">
+              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -186,15 +483,19 @@
         <option value="$PROJECT_DIR$/res/values-v21/base-template-styles.xml" />
         <option value="$PROJECT_DIR$/src/com/Bluetooth/Activity/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/com/Bluetooth/Activity/DeviceScanActivityB.java" />
-        <option value="$PROJECT_DIR$/src/com/Bluetooth/Activity/DeviceScanActivity.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/Bluetooth/Activity/SampleGattAttributes.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/common/FileCtl.java" />
+        <option value="$PROJECT_DIR$/src/com/common/WriteThread.java" />
+        <option value="$PROJECT_DIR$/src/com/Bluetooth/DTO/ViewData.java" />
+        <option value="$PROJECT_DIR$/src/com/common/DataPool.java" />
+        <option value="$PROJECT_DIR$/src/com/Bluetooth/Activity/DeviceScanActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="99" />
+    <option name="y" value="11" />
     <option name="width" value="1291" />
     <option name="height" value="784" />
   </component>
@@ -226,6 +527,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -233,9 +535,15 @@
               <option name="myItemId" value="Bluetooth" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+              <option name="myItemId" value="Bluetooth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bluetooth1.0" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -244,40 +552,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="yiqiang_Bluetooth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bluetooth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yiqiang_Bluetooth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="Bluetooth1.0" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bluetooth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yiqiang_Bluetooth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -286,24 +570,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="yiqiang_Bluetooth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="Bluetooth1.0" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Bluetooth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -312,44 +592,53 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="yiqiang_Bluetooth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bluetooth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Activity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bluetooth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yiqiang_Bluetooth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="Bluetooth1.0" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bluetooth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bluetooth1.0" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bluetooth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bluetooth1.0" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -390,6 +679,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="AVD_for_Nexus_4" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -403,6 +693,16 @@
     </key>
   </component>
   <component name="RunManager" selected="Android Application.Bluetooth">
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -430,6 +730,42 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -494,6 +830,41 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -562,6 +933,7 @@
       <created>1441117297788</created>
       <updated>1441117297788</updated>
       <workItem from="1441117299468" duration="1395000" />
+      <workItem from="1443100928850" duration="8899000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of github.com:941283088/Bluetooth1.0&#10;&#10;Conflicts:&#10;&#9;res/layout/main.xml&#10;&#9;src/com/example/Bluetooth/MainActivity.java&#10;">
       <created>1443097801016</created>
@@ -571,42 +943,42 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1395000" />
+    <option name="totallyTimeSpent" value="10294000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1291" height="784" extended-state="6" />
-    <editor active="true" />
+    <frame x="99" y="11" width="1291" height="784" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32535884" sideWeight="0.120227456" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32838038" sideWeight="0.5011765" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32535884" sideWeight="0.87977254" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32838038" sideWeight="0.49882352" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32392272" sideWeight="0.87921566" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24939074" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31600326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.49959382" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31529412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838038" sideWeight="0.49882352" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32981315" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.49959382" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.49959382" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -636,6 +1008,56 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="513">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-v21/base-template-styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="570">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/Activity/BluetoothLeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1482" max-vertical-offset="6175">
+          <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/Activity/SampleGattAttributes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="722">
+          <caret line="37" column="77" selection-start-line="37" selection-start-column="77" selection-end-line="37" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="570">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/gatt_services.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="665">
+          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+          <folding>
+            <element signature="e#1140#1165#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/project.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="380">
@@ -646,13 +1068,6 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="171">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/www/android-sdks/platforms/android-15/android.jar!/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3819">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -683,34 +1098,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="475">
           <caret line="17" column="73" selection-start-line="17" selection-start-column="73" selection-end-line="17" selection-end-column="73" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/www/android-sdks/sources/android-19/android/bluetooth/BluetoothServerSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1273" max-vertical-offset="3230">
-          <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/www/android-sdks/sources/android-19/android/bluetooth/BluetoothProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="532" max-vertical-offset="3819">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/www/android-sdks/platforms/android-15/android.jar!/android/Manifest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="3249">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/www/android-sdks/platforms/android-15/android.jar!/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3819">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -793,55 +1180,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/www/android-sdks/sources/android-19/android/content/pm/PackageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.90051" vertical-offset="5285" max-vertical-offset="60686">
-          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/www/android-sdks/sources/android-19/android/bluetooth/BluetoothServerSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="497" max-vertical-offset="2717">
-          <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/www/android-sdks/sources/android-19/android/bluetooth/BluetoothProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="3553">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/www/android-sdks/platforms/android-15/android.jar!/android/Manifest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1596" max-vertical-offset="3230">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/www/android-sdks/platforms/android-15/android.jar!/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3819">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/www/android-sdks/sources/android-19/android/bluetooth/BluetoothA2dp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6197" max-vertical-offset="9975">
-          <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/www/android-sdks/sources/android-19/android/bluetooth/BluetoothClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6964285" vertical-offset="0" max-vertical-offset="6384">
-          <caret line="50" column="19" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ant.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="437">
@@ -892,13 +1230,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/www/android-sdks/sources/android-19/android/app/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33157894" vertical-offset="61130" max-vertical-offset="100111">
-          <caret line="3383" column="15" selection-start-line="3383" selection-start-column="15" selection-end-line="3383" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/base/BluetoothTools.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1009" max-vertical-offset="3420">
@@ -910,41 +1241,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="139" max-vertical-offset="532">
           <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/Activity/DeviceControlActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="5092">
-          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="361">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="665">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/gatt_services.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="665">
-          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -980,43 +1276,157 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/Activity/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/Activity/SampleGattAttributes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2451" max-vertical-offset="2565">
-          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="722">
+          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/Activity/DeviceScanActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/Activity/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="462" max-vertical-offset="4617">
-          <caret line="43" column="31" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2565">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.84" vertical-offset="228" max-vertical-offset="665">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/gatt_services.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.04" vertical-offset="262" max-vertical-offset="665">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+          <folding>
+            <element signature="e#1140#1165#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="361">
+          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/listitem_device.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.72549" vertical-offset="228" max-vertical-offset="627">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/gatt_services_characteristics.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1444">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/actionbar_indeterminate_progress.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/Activity/BluetoothLeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="5510">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/Activity/DeviceControlActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="5054">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="513">
-          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="202" max-vertical-offset="551">
+          <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/Activity/BluetoothLeService.java">
+    <entry file="file://$PROJECT_DIR$/src/com/common/FileCtl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5129" max-vertical-offset="5510">
-          <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="893">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/common/WriteThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="186" max-vertical-offset="627">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/Activity/SampleGattAttributes.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/DTO/ViewData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8071066" vertical-offset="119" max-vertical-offset="722">
-          <caret line="37" column="77" selection-start-line="37" selection-start-column="77" selection-end-line="37" selection-end-column="77" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="589">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Bluetooth/Activity/DeviceScanActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="4161">
+          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+          <folding>
+            <element signature="e#1896#1918#0" expanded="true" />
+            <element signature="e#2225#2251#0" expanded="true" />
+            <element signature="e#2783#2821#0" expanded="true" />
+            <element signature="e#8482#8505#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/common/DataPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="595" max-vertical-offset="1121">
+          <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#538#548#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
