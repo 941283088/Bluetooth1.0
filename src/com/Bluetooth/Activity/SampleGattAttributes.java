@@ -33,6 +33,10 @@ public class SampleGattAttributes {
         // Sample Characteristics.
         attributes.put(HEART_RATE_MEASUREMENT, "Heart Rate Measurement");
         attributes.put("00002a29-0000-1000-8000-00805f9b34fb", "Manufacturer Name String");
+        attributes.put("0783b03e-8535-b5a0-7140-a304d2495cb7","这是SPS_SERVICE_UUID");
+        attributes.put("0783b03e-8535-b5a0-7140-a304d2495cb8","这是SPS_SERVER_TX_UUID");
+        attributes.put("0783b03e-8535-b5a0-7140-a304d2495cba","这是SPS_SERVER_RX_UUID");
+        attributes.put("0783b03e-8535-b5a0-7140-a304d2495cb9","这是SPS_FLOW_CTRL_UUID");
     }
 
     public static String lookup(String uuid, String defaultName) {
