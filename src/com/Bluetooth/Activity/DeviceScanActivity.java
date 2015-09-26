@@ -35,7 +35,15 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.Bluetooth.DTO.ViewData;
+import com.common.DataPool;
+import com.common.FileCtl;
+import com.common.WriteThread;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 /**
@@ -76,6 +84,19 @@ public class DeviceScanActivity extends ListActivity {
             finish();
             return;
         }
+
+        for(int i=0;i<100;i++) {
+            ViewData vd = new ViewData();
+            vd.ext="test";
+            vd.value= i;
+            DataPool.add(vd);
+        }
+       String ans =  DataPool.getCVS(10);
+        //FileCtl.writeFileSdcardFile("XXX2.txt",ans);
+       //FileCtl.method2("XXX2.txt",ans);
+
+      WriteThread wt= new WriteThread(1,10);
+       wt.start();
     }
 
     @Override
