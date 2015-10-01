@@ -7,7 +7,6 @@
 build/
 .gradle/
 */build/
-.idea/
 # generated files
 bin/
 gen/
@@ -22,7 +21,6 @@ gen/
 .idea/modules.xml
 .idea/scopes/scope_settings.xml
 .idea/vcs.xml
-.idea/workspace.xml
 .idea/libraries
 
 
