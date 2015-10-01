@@ -100,13 +100,15 @@ public class DeviceScanActivity extends ListActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu) {  //创建菜单
         getMenuInflater().inflate(R.menu.main, menu);
         if (!mScanning) {
+            //没有搜索
             menu.findItem(R.id.menu_stop).setVisible(false);
             menu.findItem(R.id.menu_scan).setVisible(true);
             menu.findItem(R.id.menu_refresh).setActionView(null);
         } else {
+            //搜索中，显示stop按钮
             menu.findItem(R.id.menu_stop).setVisible(true);
             menu.findItem(R.id.menu_scan).setVisible(false);
             menu.findItem(R.id.menu_refresh).setActionView(
@@ -116,7 +118,7 @@ public class DeviceScanActivity extends ListActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) { //选中蓝牙适配器
         switch (item.getItemId()) {
             case R.id.menu_scan:
                 mLeDeviceListAdapter.clear();
@@ -165,6 +167,14 @@ public class DeviceScanActivity extends ListActivity {
         mLeDeviceListAdapter.clear();
     }
 
+    /**
+     * 点击搜索到的蓝牙设备
+     *
+     * @param l
+     * @param v
+     * @param position
+     * @param id
+     */
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         final BluetoothDevice device = mLeDeviceListAdapter.getDevice(position);
@@ -176,6 +186,7 @@ public class DeviceScanActivity extends ListActivity {
             mBluetoothAdapter.stopLeScan(mLeScanCallback);
             mScanning = false;
         }
+        //启动DeviceControlActivity
         startActivity(intent);
     }
 
@@ -192,6 +203,7 @@ public class DeviceScanActivity extends ListActivity {
             }, SCAN_PERIOD);
 
             mScanning = true;
+
             mBluetoothAdapter.startLeScan(mLeScanCallback);
         } else {
             mScanning = false;

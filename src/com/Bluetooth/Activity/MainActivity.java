@@ -3,6 +3,9 @@ package com.Bluetooth.Activity;
 import android.app.Activity;
 import android.os.Bundle;
 import com.Bluetooth.base.BluetoothTools;
+
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 
 
@@ -14,8 +17,17 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+
 import android.graphics.Color;
 import android.os.Bundle;
+
+import lecho.lib.hellocharts.model.Line;
+import lecho.lib.hellocharts.model.LineChartData;
+import lecho.lib.hellocharts.model.PointValue;
+import lecho.lib.hellocharts.view.LineChartView;
 
 /**
  * Created by TR on 2015/9/5.
@@ -37,10 +49,62 @@ public class MainActivity extends Activity
         BluetoothTools.initBluetooth();
         BluetoothTools.findDevicesByName("ddd");
 
-        mLineChart = (LineChart) findViewById(R.id.spread_line_chart);
-        LineData mLineData = getLineData(36, 100);
-        showChart(mLineChart, mLineData, Color.rgb(114, 188, 223));
+        List<PointValue> values = new ArrayList<PointValue>();
+        values.add(new PointValue(0, 2));
+        values.add(new PointValue(1, 4));
+        values.add(new PointValue(2, 3));
+        values.add(new PointValue(3, 4));
+        values.add(new PointValue(3.4f, 4.3f));
+        values.add(new PointValue(4.f, 3.2f));
+//In most cased you can call data model methods in builder-pattern-like manner.
+        Line line = new Line(values).setColor(Color.BLUE).setCubic(true);
+        List<Line> lines = new ArrayList<Line>();
+        lines.add(line);
+        LineChartData data = new LineChartData();
+        data.setLines(lines);
+        LineChartView chart = (LineChartView) findViewById(R.id.chart);
+        chart.setLineChartData(data);
 
+
+
+
+
+//        mLineChart = (LineChart) findViewById(R.id.spread_line_chart);
+//        final LineData mLineData = getLineData(36, 100);
+//        showChart(mLineChart, mLineData, Color.rgb(114, 188, 223));
+//        Timer mTimer = new Timer();
+//
+//
+//        mTimer = new Timer();
+//        mTimer.schedule(new TimerTask() {
+//            @Override
+//            public void run() {
+//
+//                Message message = new Message();
+//                message.what = 1;
+//                handler.sendMessage(message);
+//
+//
+//            }
+//        }, 1*1000, 1*1000);
+
+
+    }
+
+    Handler handler = new Handler() {
+        public void handleMessage(Message msg) {
+            if (msg.what == 1) {
+                LineData mLineData = getLineData(36, 100);
+                mLineChart.setData(mLineData);
+                mLineChart.animateX(0);
+//                refreshMLineChart();
+            }
+            super.handleMessage(msg);
+        };
+    };
+
+    private void refreshMLineChart(){
+        mLineChart.invalidate();
     }
 
     // 设置显示的样式
@@ -81,9 +145,12 @@ public class MainActivity extends Activity
         mLegend.setTextColor(Color.WHITE);// 颜色
 //      mLegend.setTypeface(mTf);// 字体
 
-        lineChart.animateX(2500); // 立即执行的动画,x轴
+        lineChart.animateX(0); // 立即执行的动画,x轴
     }
 
+
+    ArrayList<Entry> yValues = new ArrayList<Entry>();
+    ArrayList<String> xValues = new ArrayList<String>();
     /**
      * 生成一个数据
      * @param count 表示图表中有多少个坐标点
@@ -91,18 +158,31 @@ public class MainActivity extends Activity
      * @return
      */
     private LineData getLineData(int count, float range) {
-        ArrayList<String> xValues = new ArrayList<String>();
+
         for (int i = 0; i < count; i++) {
             // x轴显示的数据，这里默认使用数字下标显示
-            xValues.add("" + i);
+
         }
 
-        // y轴的数据
-        ArrayList<Entry> yValues = new ArrayList<Entry>();
-        for (int i = 0; i < count; i++) {
+        // y轴的数据;
+       if (yValues.size()>=count){
+           yValues.remove(0);
+           xValues.remove(0);
+       }
+        int start = 0;
+        if (xValues.size()>0){
+//            try {
+//
+//            }catch ()
+            start = Integer.parseInt(xValues.get(xValues.size()-1));
+        }
+        for (int i =start+1; yValues.size() < count; i++) {
             float value = (float) (Math.random() * range) + 3;
             yValues.add(new Entry(value, i));
+            xValues.add("" + i);
+            Log.d("yValues i:",""+i);
         }
+
 
         // create a dataset and give it a type
         // y轴的数据集合

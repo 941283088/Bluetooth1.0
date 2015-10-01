@@ -9,10 +9,14 @@
             android:layout_height="wrap_content"
             android:text="@string/hello"
             />
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/spread_line_chart"
+    <!--<com.github.mikephil.charting.charts.LineChart-->
+        <!--android:id="@+id/spread_line_chart"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="320dip"-->
+        <!--android:layout_gravity="center_horizontal" />-->
+    <lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/chart"
         android:layout_width="match_parent"
-        android:layout_height="320dip"
-        android:layout_gravity="center_horizontal" />
+        android:layout_height="match_parent" />
 </LinearLayout>
 

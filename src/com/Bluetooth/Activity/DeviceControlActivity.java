@@ -51,11 +51,11 @@ public class DeviceControlActivity extends Activity {
     public static final String EXTRAS_DEVICE_NAME = "DEVICE_NAME";
     public static final String EXTRAS_DEVICE_ADDRESS = "DEVICE_ADDRESS";
 
-    private TextView mConnectionState;
-    private TextView mDataField;
+    private TextView mConnectionState;  //连接状态
+    private TextView mDataField;         //数据
     private String mDeviceName;
     private String mDeviceAddress;
-    private ExpandableListView mGattServicesList;
+    private ExpandableListView mGattServicesList;    //服务列表
     private BluetoothLeService mBluetoothLeService;
     private ArrayList<ArrayList<BluetoothGattCharacteristic>> mGattCharacteristics =
             new ArrayList<ArrayList<BluetoothGattCharacteristic>>();
@@ -68,6 +68,11 @@ public class DeviceControlActivity extends Activity {
     // Code to manage Service lifecycle.
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
 
+        /**
+         * 设备连接上的响应
+         * @param componentName
+         * @param service
+         */
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder service) {
             mBluetoothLeService = ((BluetoothLeService.LocalBinder) service).getService();
@@ -95,18 +100,18 @@ public class DeviceControlActivity extends Activity {
         @Override
         public void onReceive(Context context, Intent intent) {
             final String action = intent.getAction();
-            if (BluetoothLeService.ACTION_GATT_CONNECTED.equals(action)) {
+            if (BluetoothLeService.ACTION_GATT_CONNECTED.equals(action)) {  //连接上
                 mConnected = true;
                 updateConnectionState(R.string.connected);
                 invalidateOptionsMenu();
-            } else if (BluetoothLeService.ACTION_GATT_DISCONNECTED.equals(action)) {
+            } else if (BluetoothLeService.ACTION_GATT_DISCONNECTED.equals(action)) {  //断开连接
                 mConnected = false;
                 updateConnectionState(R.string.disconnected);
                 invalidateOptionsMenu();
                 clearUI();
-            } else if (BluetoothLeService.ACTION_GATT_SERVICES_DISCOVERED.equals(action)) {
+            } else if (BluetoothLeService.ACTION_GATT_SERVICES_DISCOVERED.equals(action)) { //发现设备
                 // Show all the supported services and characteristics on the user interface.
-                displayGattServices(mBluetoothLeService.getSupportedGattServices());
+                displayGattServices(mBluetoothLeService.getSupportedGattServices());  //获取服务列表
             } else if (BluetoothLeService.ACTION_DATA_AVAILABLE.equals(action)) {
                 displayData(intent.getStringExtra(BluetoothLeService.EXTRA_DATA));
             }
@@ -158,13 +163,13 @@ public class DeviceControlActivity extends Activity {
         setContentView(R.layout.gatt_services_characteristics);
 
         final Intent intent = getIntent();
-        mDeviceName = intent.getStringExtra(EXTRAS_DEVICE_NAME);
-        mDeviceAddress = intent.getStringExtra(EXTRAS_DEVICE_ADDRESS);
+        mDeviceName = intent.getStringExtra(EXTRAS_DEVICE_NAME);  //设备名称
+        mDeviceAddress = intent.getStringExtra(EXTRAS_DEVICE_ADDRESS);  //设备地址
 
         // Sets up UI references.
         ((TextView) findViewById(R.id.device_address)).setText(mDeviceAddress);
         mGattServicesList = (ExpandableListView) findViewById(R.id.gatt_services_list);
-        mGattServicesList.setOnChildClickListener(servicesListClickListner);
+        mGattServicesList.setOnChildClickListener(servicesListClickListner); //绑定点击UUID事件
         mConnectionState = (TextView) findViewById(R.id.connection_state);
         mDataField = (TextView) findViewById(R.id.data_value);
 
@@ -197,6 +202,11 @@ public class DeviceControlActivity extends Activity {
         mBluetoothLeService = null;
     }
 
+    /**
+     * 菜单的按钮配置
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.gatt_services, menu);
