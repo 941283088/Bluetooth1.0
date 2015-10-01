@@ -81,6 +81,8 @@ public class BluetoothLeService extends Service {
                 Log.i(TAG, "尝试开启发现状态 Attempting to start service discovery:" +
                         mBluetoothGatt.discoverServices());
 
+
+
             } else if (newState == BluetoothProfile.STATE_DISCONNECTED) { //断开连接
                 intentAction = ACTION_GATT_DISCONNECTED;
                 mConnectionState = STATE_DISCONNECTED;
@@ -314,7 +316,14 @@ public class BluetoothLeService extends Service {
      */
     public List<BluetoothGattService> getSupportedGattServices() {
         if (mBluetoothGatt == null) return null;
+        BluetoothGattService tempService = mBluetoothGatt.getService(UUID.fromString("0783b03e-8535-b5a0-7140-a304d2495cb7"));
+        if (tempService != null){
+            Log.d("tempService :",tempService.toString());
 
+            Log.d("tempService getCharacteristics",tempService.getCharacteristics().toString());
+        }else {
+            Log.d("tempService :","null ---- ");
+        }
         return mBluetoothGatt.getServices();
     }
 }
