@@ -66,7 +66,8 @@ public class DeviceControlActivity extends Activity {
     private final String LIST_UUID = "UUID";
 
     // Code to manage Service lifecycle.
-    private final ServiceConnection mServiceConnection = new ServiceConnection() {
+    private final ServiceConnection mServiceConnection = new ServiceConnection()
+    {
 
         /**
          * 设备连接上的响应

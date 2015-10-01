@@ -46,8 +46,8 @@ public class MainActivity extends Activity
 
         setContentView(R.layout.main);
         Log.i("dd","affair");
-        BluetoothTools.initBluetooth();
-        BluetoothTools.findDevicesByName("ddd");
+//        BluetoothTools.initBluetooth();
+//        BluetoothTools.findDevicesByName("ddd");
 
         List<PointValue> values = new ArrayList<PointValue>();
         values.add(new PointValue(0, 2));

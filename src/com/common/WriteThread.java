@@ -18,7 +18,7 @@ public class WriteThread extends Thread  {
             try {
                 Thread.sleep(step);
                 //FileCtl.writeFileSdcardFile("test.txt", DataPool.getCVS(len));
-                FileCtl.method2("test.txt",DataPool.getCVS(len));
+                FileCtl.writeFileSdcardFile2("Bluetooth.txt",DataPool.getCVS(len));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
