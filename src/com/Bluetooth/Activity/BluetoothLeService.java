@@ -81,6 +81,9 @@ public class BluetoothLeService extends Service {
                 Log.i(TAG, "尝试开启发现状态 Attempting to start service discovery:" +
                         mBluetoothGatt.discoverServices());
 
+
+
+
             } else if (newState == BluetoothProfile.STATE_DISCONNECTED) { //断开连接
                 intentAction = ACTION_GATT_DISCONNECTED;
                 mConnectionState = STATE_DISCONNECTED;
@@ -279,6 +282,7 @@ public class BluetoothLeService extends Service {
             Log.w(TAG, "BluetoothAdapter not initialized");
             return;
         }
+        Log.w(TAG, "BluetoothAdapter readCharacter");
         mBluetoothGatt.readCharacteristic(characteristic);
     }
 

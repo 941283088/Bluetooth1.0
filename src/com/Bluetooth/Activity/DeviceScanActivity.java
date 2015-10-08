@@ -45,6 +45,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
+import java.util.UUID;
 
 /**
  * Activity for scanning and displaying available Bluetooth LE devices.
@@ -95,8 +96,8 @@ public class DeviceScanActivity extends ListActivity {
         //FileCtl.writeFileSdcardFile("XXX2.txt",ans);
        //FileCtl.method2("XXX2.txt",ans);
 
-      WriteThread wt= new WriteThread(1,10);
-       wt.start();
+//      WriteThread wt= new WriteThread(1,10);
+//       wt.start();
     }
 
     @Override
@@ -203,7 +204,6 @@ public class DeviceScanActivity extends ListActivity {
             }, SCAN_PERIOD);
 
             mScanning = true;
-
             mBluetoothAdapter.startLeScan(mLeScanCallback);
         } else {
             mScanning = false;
